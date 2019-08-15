@@ -39,6 +39,8 @@ UILabel *label;
     tableView.delegate = self ;
     tableView.dataSource = self ;
     
+    self.title = @"账号";
+    
     UIImage *imageSao = [UIImage imageNamed:@"扫一扫.png"] ;
     UIBarButtonItem *btnSao = [[UIBarButtonItem alloc] initWithImage:imageSao style:UIBarButtonItemStylePlain target:self action:@selector(pressSao)] ;
     self.navigationItem.leftBarButtonItem = btnSao;
@@ -206,16 +208,6 @@ UILabel *label;
     } else {
         return 15;
     }
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    self.hidesBottomBarWhenPushed = YES;
-    
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-    self.hidesBottomBarWhenPushed = NO;
-    
 }
 
 /*

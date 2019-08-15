@@ -52,9 +52,9 @@ NSMutableDictionary *dataDic;
     tableView.delegate = self;
     tableView.dataSource = self;
     
-    UILabel *Head = [[UILabel alloc] init];
+    //UILabel *Head = [[UILabel alloc] init];
     self.title = @"我的音乐";
-    Head.textAlignment = NSTextAlignmentCenter;
+    //Head.textAlignment = NSTextAlignmentCenter;
     
     UILabel *label1 = [[UILabel alloc] initWithFrame:CGRectMake(370, 142, 12, 12)] ;
     label1.text = @"0" ;
@@ -144,11 +144,6 @@ NSMutableDictionary *dataDic;
     cell.multipleSelectionBackgroundView = [[UIView alloc] initWithFrame:cell.bounds];
     cell.multipleSelectionBackgroundView.backgroundColor = [UIColor clearColor];
     
-    if(!cell) {
-        cell = [[TAYTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"123"];
-        
-        cell.selectionStyle = UITableViewCellSelectionStyleGray;
-    }
     
     //NSString *indexStr = [NSString stringWithFormat:@"%ld",(long)indexPath.section];
      //NSString *str=[NamesGroup objectAtIndex:indexPath.section];
@@ -280,14 +275,5 @@ NSMutableDictionary *dataDic;
     // Pass the selected object to the new view controller.
 }
 */
-- (void)viewWillAppear:(BOOL)animated {
-    self.hidesBottomBarWhenPushed = YES;
-    
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-    self.hidesBottomBarWhenPushed = NO;
-    
-}
 
 @end
